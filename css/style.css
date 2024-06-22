@@ -332,7 +332,7 @@ body::-webkit-scrollbar-thumb {
 
       /* Team Section Start*/
       .bg-team {
-        background: url("css/team-bg.png");
+        background: url('team-bg.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
