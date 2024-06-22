@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+/* .nav-item .nav-link.active{
+    color: var(--text-red)!important;
+    font-weight: 900 !important;
+  } */
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--background-red);
+  /* outline: 1px solid slategrey; */
+}
+
+:root {
+  --text-red: #da1d25;
+  --text-white: #f3f3f3;
+  --text-black: #101010;
+  --text-grey: #666666;
+  --background-black: #101010;
+  --background-white: #f3f3f3;
+  --background-red: #da1d25;
+}
+
+.custom-mt {
+  margin-top: 80px;
+}
+
+.custom-px {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+/* header */
+.navbar {
+  z-index: 10;
+  position: absolute; /* Makes the navbar stay on top of the video */
+  width: 100%;
+  /* backdrop-filter: blur(10px);  */
+}
+
+.scrolled {
+  background-color: var(--background-black) !important;
+  transition: background-color 0.3s ease;
+  padding-top: 20px !important;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.153);
+}
+
+.main-header {
+  padding-top: 25px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.main-header .navbar {
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-link {
+  color: var(--text-white);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.nav-item-subscribe {
+  background: var(--background-red);
+  border-radius: 10px;
+  margin-left: 15px;
+  padding: 3px;
+}
+.nav-item-subscribe:hover {
+  background: var(--background-white);
+}
+
+.nav-item-subscribe:hover a {
+  color: #101010;
+}
+
+.navbar-toggler:focus {
+  box-shadow: unset;
+}
+/* header end*/
+
+/* hero */
+.hero-video {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.hero-video .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Optional: Adds a dark overlay */
+}
+
+.hero-video .content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-br-tb {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.video-br {
+  border-bottom: 1px solid #f3f3f3;
+  margin: 0 auto;
+  width: 30%;
+}
+
+.content p {
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+
+.content h1 {
+  font-size: 80px;
+  letter-spacing: 3px;
+  font-weight: 500;
+  font-family: "Teko", sans-serif;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.content a {
+  background: transparent;
+  border: 3px solid #f3f3f3;
+  border-radius: 10px;
+  letter-spacing: 3px;
+  color: var(--text-white);
+  padding: 12px 16px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.content a:hover {
+  color: var(--text-white);
+  background: var(--background-red);
+  border: 3px solid #da1d25;
+}
+/* hero end */
+
+/* About Start */
+.about-image img {
+  border-radius: 10px;
+}
+
+.about-content h6 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-red);
+  letter-spacing: 2px;
+}
+
+.about-content h1 {
+  padding-top: 5px;
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 600;
+  color: var(--text-black);
+  font-family: "Teko", sans-serif;
+}
+
+.about-content p {
+  font-size: 16px;
+  color: var(--text-grey);
+  line-height: 25.6px;
+}
+
+.icon-about h1 {
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.icon-about p {
+  font-size: 16px;
+  color: var(--text-grey);
+  margin-bottom: 0px;
+}
+
+.section-about {
+  background: var(--background-black);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.about-content i {
+  color: var(--background-red);
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.button-about {
+  background: var(--background-red);
+  width: fit-content;
+  border-radius: 10px;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.button-about button {
+  color: var(--background-white);
+}
+.button-about:hover button {
+  color: var(--background-white);
+}
+/* About End*/
+
+/*save-money Start*/
+.bg-save-money a:hover {
+  color: white;
+}
+.bg-save-money {
+  background-image:url('savemoney.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.bg-save-money h1 {
+  font-size: 58px;
+  color: white;
+  font-family: "Teko";
+  letter-spacing: 1px;
+}
+.bg-save-money p {
+  font-size: 16px;
+  color: white;
+}
+
+.bg-save-money a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  border: 2px solid white;
+  width: fit-content;
+  padding: 10px 20px;
+  margin-top: 15px;
+}
+
+.bg-save-money a:hover {
+  background: var(--background-red);
+  border: 2px solid var(--background-red);
+}
+/*save-money End*/
+
+      /*FAQ Start*/
+      .faq img {
+        border-radius: 10px;
+      }
+      .accordion-flush .accordion-item .accordion-button {
+        background: black;
+        color: white;
+        border-radius: 10px;
+        font-family: "Teko";
+        font-size: 24px;
+        letter-spacing: 1px;
+      }
+
+      .accordion-item:last-of-type .accordion-button.collapsed {
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+
+      .accordion-body {
+        background: var(--background-white);
+        border-radius: 10px;
+      }
+      .faq-section h1 {
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--black);
+      }
+      .accordion-button:focus {
+        z-index: 0;
+        border-color: transparent;
+        outline: 0;
+        box-shadow: unset;
+      }
+
+      .accordion-button:not(.collapsed) {
+        color: white;
+        background-color: var(--black);
+        /* box-shadow: unset; */
+      }
+
+      .accordion-button:not(.collapsed)::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='%23ffffff' fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
+
+      .accordion-button::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='%23ffffff' fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
+
+      .accordion-button.collapsed {
+        font-size: 16px;
+      }
+
+      .accordion-button {
+        font-size: 16px;
+      }
+
+      .accordion-body {
+        font-size: 16px;
+      }
+
+      /*FAQ End*/
+
+/* Footer*/
+.footer-link li {
+  padding-bottom: 15px;
+}
+
+.quick-links-footer {
+  padding-left: 100px;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.footer {
+  margin-top: 50px !important;
+}
+
+.btn-outline-primary {
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.mr-2 {
+  margin-right: 0.5rem !important;
+}
+
+.btn-outline-primary:hover {
+  color: var(--white);
+  background-color: var(--green);
+  border-color: var(--green);
+}
+
+.title-footer {
+  font-size: 24px;
+}
+
+.devlints {
+  color: var(--green);
+}
+
+.devlints:hover {
+  color: var(--green);
+}
+
+.bg-footer {
+  background: var(--background-black);
+}
+.footer-link li a {
+  text-decoration: none;
+}
+.title-footer {
+  font-family: "Teko";
+  font-size: 28px;
+}
+
+.footer-link li pre {
+  font-size: 16px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.social-icon:hover {
+  background: var(--background-red);
+  border: 1px solid var(--background-red);
+}
+
+/*footer*/
+
+/* Subscribe Start */
+.hero-image {
+  background: url("gym-banner.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+.hero-image-inner {
+  margin-top: 250px;
+}
+
+.hero-image-inner h1 {
+  font-family: "Teko";
+  font-size: 70px;
+  margin-bottom: 0px;
+}
+
+.hero-image-inner span {
+  font-family: "Teko";
+  font-size: 30px;
+}
+/* Subscribe End */
+@media only screen and (max-width: 768px) {
+  .custom-px {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .nav-item-subscribe {
+    width: fit-content;
+    margin-left: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .content h1 {
+    font-size: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .content a {
+    font-size: 12px;
+  }
+
+  .video-br-tb {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav {
+    margin-top: 10px;
+  }
+
+  .about-content h1 {
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  .about-content {
+    padding-top: 20px;
+  }
+
+  .about-content h1 br {
+    display: none;
+  }
+
+  .icon-about h1 {
+    font-size: 24px;
+  }
+
+  .mob-about-2 {
+    flex-direction: column-reverse;
+  }
+
+  .mob-item {
+    padding-bottom: 30px;
+  }
+
+  .photo-gallery h1 {
+    font-size: 35px;
+  }
+
+  .bg-team-title-1 {
+    font-size: 35px;
+  }
+
+  .believe-in-yourself h1 {
+    font-size: 35px!Important;
+  }
+
+  .believe-in-yourself {
+    flex-direction: column-reverse;
+  }
+
+  .believe-in-yourself h1 {
+    padding-top: 20px;
+  }
+
+  .sweat-everyday h1 {
+    padding-top: 20px;
+  }
+
+  .custom-mt {
+    margin-top: 50px;
+  }
+
+  .sweat-everyday h1 {
+    font-size: 35px;
+  }
+  .bg-save-money h1 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  .faq .row {
+    flex-direction: column-reverse;
+  }
+
+  .accordion-flush .accordion-item .accordion-button {
+    font-size: 18px;
+  }
+
+  #accordionFlushExample {
+    padding-top: 30px;
+  }
+
+  .quick-links-footer{
+    padding-left: 12px;
+  }
+  .hero-image-inner h1 {
+    font-size: 55px;
+  }
+  
+  .hero-image-inner span {
+    font-size: 24px;
+  }
+  .section-title h2{
+    font-size: 35px;
+  }
+}

@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+    />
+
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Home</title>
+
+    <style>
+      /* Section Gallery*/
+      div#lightbox {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .lb-outerContainer {
+        order: 2;
+      }
+
+      .lb-dataContainer {
+        order: 1;
+        margin-bottom: 10px;
+      }
+
+      .lb-data .lb-details {
+        line-height: 1.5em !important;
+      }
+      .photo-gallery {
+        color: #313437;
+        background-color: #fff;
+      }
+
+      .photo-gallery h1 {
+        padding-top: 5px;
+        font-size: 45px;
+        line-height: 45px;
+        font-weight: 600;
+        color: var(--text-black);
+        font-family: "Teko", sans-serif;
+        letter-spacing: 1px;
+      }
+
+      .photo-gallery h6 {
+        font-size: 16px;
+        color: var(--text-red);
+        letter-spacing: 2px;
+        margin: 0px;
+        font-weight: 600;
+      }
+      .photo-gallery p {
+        font-size: 16px;
+        color: var(--text-grey);
+        line-height: 25.6px;
+      }
+
+      .photo-gallery h2 {
+        font-weight: bold;
+        margin-bottom: 40px;
+        padding-top: 40px;
+        color: inherit;
+      }
+
+      .photo-gallery .intro {
+        font-size: 16px;
+        max-width: 500px;
+        margin: 0 auto 40px;
+      }
+
+      .photo-gallery .intro p {
+        margin-bottom: 0;
+      }
+
+      .photo-gallery .photos {
+        padding-bottom: 20px;
+      }
+
+      .item {
+        padding-bottom: 30px;
+      }
+
+      .photo-gallery img {
+        border-radius: 10px;
+      }
+      /* Section Gallery End*/
+
+      /* Team Section Start*/
+      .bg-team {
+        background: url("css/team-bg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        padding-top: 80px;
+        padding-bottom: 40px;
+      }
+
+      .bg-team p {
+        margin: 0px;
+      }
+
+      .outer-team-member {
+        position: relative;
+        padding-top: 50px;
+      }
+
+      .outer-team-member img {
+        border-radius: 10px;
+        width: 100%;
+      }
+
+      .team-member-text {
+        background: var(--background-red);
+        border-radius: 10px;
+        color: white;
+        position: absolute;
+        width: 80%;
+        top: 90%;
+        left: 10%;
+        right: 10%;
+        padding: 5px;
+      }
+
+      .team-member-text p {
+        margin: 0px;
+        padding-top: 2px;
+      }
+      .team-member-text h3 {
+        font-size: 24px;
+        letter-spacing: 1px;
+        margin: 0px;
+      }
+
+      .bg-team-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--text-red);
+        letter-spacing: 2px;
+      }
+      .bg-team-title-1 {
+        color: white;
+        font-family: "Teko";
+        font-size: 45px;
+        letter-spacing: 1px;
+      }
+      /* Team Section End*/
+
+      /*Believe In Yourself Start*/
+      .believe-in-yourself h1 {
+        padding-top: 5px;
+        font-size: 45px;
+        line-height: 45px;
+        font-weight: 600;
+        color: var(--text-black);
+        font-family: "Teko", sans-serif;
+      }
+
+      .believe-in-yourself h6 {
+        font-size: 16px;
+        color: var(--text-red);
+        letter-spacing: 2px;
+        margin: 0px;
+        font-weight: 600;
+      }
+
+      .believe-in-yourself p {
+        padding-top: 15px;
+        font-size: 16px;
+        color: var(--text-grey);
+        line-height: 25.6px;
+      }
+      .believe-in-yourself img {
+        border-radius: 10px;
+      }
+      /*Believe In Yourself End*/
+
+      /*Sweat Everyday Start*/
+      .sweat-everyday h1 {
+        padding-top: 5px;
+        font-size: 45px;
+        line-height: 45px;
+        font-weight: 600;
+        color: var(--text-black);
+        font-family: "Teko", sans-serif;
+      }
+
+      .sweat-everyday h6 {
+        font-size: 16px;
+        color: var(--text-red);
+        letter-spacing: 2px;
+        margin: 0px;
+        font-weight: 600;
+      }
+
+      .sweat-everyday p {
+        padding-top: 15px;
+        font-size: 16px;
+        color: var(--text-grey);
+        line-height: 25.6px;
+      }
+      .sweat-everyday img {
+        border-radius: 10px;
+      }
+      /*Sweat Everyday End*/
+
+     
+
+      
+
+
+    </style>
+  </head>
+  <body>
+    <!--Header Start-->
+    <header>
+      <nav class="main-header navbar navbar-expand-lg sticky-header w-100">
+        <div class="container-fluid custom-px">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="Logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fa-solid fa-bars-staggered" style="color: white"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item px-2">
+                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link" href="#about">ABOUT</a>
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link" href="#gallery">GALLERY</a>
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link" href="#team">TEAM</a>
+              </li>
+              <li class="nav-item px-2">
+                <a class="nav-link" href="#faq">FAQ</a>
+              </li>
+              <li class="nav-item-subscribe px-2">
+                <a class="nav-link" href="subscribe.html">SUBSCRIBE</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--Header End-->
+
+    <!--Section Hero Start-->
+    <section id="home"></section>
+    <div class="hero-video">
+      <video autoplay muted loop>
+        <source src="Dummy Video For Website.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="overlay"></div>
+      <div class="content">
+        <p>Fitness Club</p>
+        <h1>IT'S NOT ABOUT HAVING TIME</h1>
+        <div class="video-br-tb">
+          <div class="video-br"></div>
+        </div>
+        <h1>IT'S ABOUT MAKING TIME</h1>
+        <a href="#" class="btn">START TO FIT</a>
+      </div>
+    </div>
+    <!--Section Hero End-->
+
+    <!--Section Overview Start-->
+
+    <section id="overview"></section>
+    <div class="container-fluid custom-px custom-mt">
+      <div class="row d-flex align-items-center">
+        <div class="col-md-6 about-image">
+          <img src="images/about.png" alt="about" width="100%" />
+        </div>
+        <div class="col-md-6 about-content ps-md-5">
+          <h6>OVERVIEW</h6>
+          <h1>
+            YOUR BODY IS YOUR MOST<br />
+            PRICELESS POSSESSION, TAKE<br />
+            CARE OF IT.
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            pharetra efficitur diam, vel sagittis ipsum. Curabitur eleifend,
+            risus id
+          </p>
+          <div class="row d-flex justify-content-evenly icon-about">
+            <div class="col-md-6  pt-2">
+              <img src="images/cardio.png" alt="cardio" width="48px" />
+              <h1>CARDIO</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="col-md-6 pt-2">
+              <img src="images/aeropics.png" alt="aeropics" width="48px" />
+              <h1>AEROPICS</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="col-md-6 pt-3">
+              <img src="images/yoga.png" alt="yoga" width="48px" />
+              <h1>YOGA</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="col-md-6 pt-3">
+              <img src="images/crossfit.png" alt="crossfit" width="48px" />
+              <h1>CROSSFIT</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Section Overview End-->
+
+    <!--Section About Start-->
+    <section id="about"></section>
+    <div class="container-fluid custom-px section-about custom-mt">
+      <div class="row d-flex align-items-center mob-about-2">
+        <div class="col-md-6 about-content pe-5">
+          <h6>ABOUT US</h6>
+          <h1 class="text-white">
+            We Use Experience To Achieve<br />
+            The Physique You Deserve
+          </h1>
+          <p class="text-white">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis pulvinar dapibus leo.Lorem
+            ipsum dolor sit amet consectetur adipiscing elit dolor
+          </p>
+          <div class="d-flex align-items-center pb-3">
+            <i class="bi bi-check-lg"></i>
+            <p class="mb-0 text-white">
+              Duis quis odio quis dui sagittis laoreet.
+            </p>
+          </div>
+          <div class="d-flex align-items-center pb-3">
+            <i class="bi bi-check-lg"></i>
+            <p class="mb-0 text-white">
+              Suspendisse tempus felis a libero mollis ultrices.
+            </p>
+          </div>
+          <div class="d-flex align-items-center pb-3">
+            <i class="bi bi-check-lg"></i>
+            <p class="mb-0 text-white">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </div>
+          <div class="d-flex align-items-center pb-3">
+            <i class="bi bi-check-lg"></i>
+            <p class="mb-0 text-white">
+              Suspendisse tempus felis a libero mollis ultrices.
+            </p>
+          </div>
+          <div class="d-flex align-items-center pb-3">
+            <i class="bi bi-check-lg"></i>
+            <p class="mb-0 text-white">
+              Proin sit amet diam et elit dictum sodales.
+            </p>
+          </div>
+          <a href="#overview" style="text-decoration: none">
+            <div class="d-flex align-items-center button-about">
+              <button class="btn">Read More</button>
+              <i class="bi bi-arrow-right" style="color: white"></i>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-6 about-image">
+          <img src="images/about-us.png" alt="about" width="100%" />
+        </div>
+      </div>
+    </div>
+
+    <!--Section About End-->
+
+    <!--Section Gallery Start-->
+    <section id="gallery"></section>
+    <div class="container-fluid custom-px custom-mt">
+      <div class="photo-gallery">
+        <div class="text-center pb-md-4 pb-2">
+          <h6>Gallery</h6>
+          <h1>Our Gallery</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            pharetra efficitur diam, vel sagittis
+          </p>
+        </div>
+        <div class="row photos">
+          <!-- Repeat these divs for each image, ensure they have the correct category class -->
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 item">
+            <a href="images/gym-1.png" data-lightbox="photos"
+              ><img class="img-fluid" src="images/gym-1.png"
+            /></a>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 item">
+            <a href="images/gym-2.png" data-lightbox="photos"
+              ><img class="img-fluid" src="images/gym-2.png"
+            /></a>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 item">
+            <a href="images/gym-3.png" data-lightbox="photos"
+              ><img class="img-fluid" src="images/gym-3.png"
+            /></a>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 mob-item">
+            <a href="images/gym-1.png" data-lightbox="photos"
+              ><img class="img-fluid" src="images/gym-1.png"
+            /></a>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 mob-item">
+            <a href="images/gym-2.png" data-lightbox="photos"
+              ><img class="img-fluid" src="images/gym-2.png"
+            /></a>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-4 mob-item">
+            <a href="images/gym-3.png" data-lightbox="photos"
+              ><img class="img-fluid" src="images/gym-3.png"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Section Gallery End-->
+
+    <!--Section Team Start-->
+    <section id="team"></section>
+    <div class="container-fluid custom-px custom-mt bg-team text-center">
+      <p class="bg-team-title">Our Founders</p>
+      <h1 class="bg-team-title-1">Meet Our Founders</h1>
+      <div class="row d-flex pb-5 mb-5">
+        <div class="col-md-3 outer-team-member">
+          <div>
+            <img
+              src="images/team-member-1.png"
+              alt="team-member-1"
+              width="100%"
+            />
+          </div>
+          <div class="team-member-text">
+            <h3>Evon Byerly</h3>
+            <p>Trainer</p>
+          </div>
+        </div>
+        <div class="col-md-3 outer-team-member">
+          <div>
+            <img
+              src="images/team-member-2.png"
+              alt="team-member-2"
+              width="100%"
+            />
+          </div>
+          <div class="team-member-text">
+            <h3>Bari Biery</h3>
+            <p>Trainer</p>
+          </div>
+        </div>
+        <div class="col-md-3 outer-team-member">
+          <div>
+            <img
+              src="images/team-member-1.png"
+              alt="team-member-1"
+              width="100%"
+            />
+          </div>
+          <div class="team-member-text">
+            <h3>Evon Byerly</h3>
+            <p>Trainer</p>
+          </div>
+        </div>
+        <div class="col-md-3 outer-team-member">
+          <div>
+            <img
+              src="images/team-member-2.png"
+              alt="team-member-2"
+              width="100%"
+            />
+          </div>
+          <div class="team-member-text">
+            <h3>Bari Biery</h3>
+            <p>Trainer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Section Team End-->
+
+    <!--Section Believe in yourself Start-->
+    <div class="container-fluid custom-px custom-mt">
+      <div class="row d-flex align-items-center believe-in-yourself">
+        <div class="col-md-6 pe-5">
+          <h1>BELIEVE IN YOUSELF</h1>
+          <h6>DON'T WISH FOR A GOOD DAY WORK FOR IT</h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            pharetra efficitur diam, vel sagittis ipsum. Curabitur eleifend,
+            risus id sollicitudin pretium, massa ex tristique velit, ullamcorper
+            feugiat dui tellus in quam. Aliquam fringilla eros et est gravida,
+            eget porttitor velit rutrum.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <img src="images/get-fit.png" alt="" width="100%" />
+        </div>
+      </div>
+    </div>
+    <!--Section Believe in yourself End-->
+
+    <!--Section Sweat Everyday Start-->
+    <div class="container-fluid custom-px custom-mt">
+      <div class="row d-flex align-items-center sweat-everyday">
+        <div class="col-md-6">
+          <img src="images/sweat.png" alt="" width="100%" />
+        </div>
+        <div class="col-md-6 ps-md-5">
+          <h1>SWEAT EVERYDAY</h1>
+          <h6>BE STRONGER THAN YOUR STRONGEST EXCUSE</h6>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+            pharetra efficitur diam, vel sagittis ipsum. Curabitur eleifend,
+            risus id sollicitudin pretium, massa ex tristique velit, ullamcorper
+            feugiat dui tellus in quam. Aliquam fringilla eros et est gravida,
+            eget porttitor velit rutrum.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--Section Sweat Everyday End-->
+
+    <!--Section Save Money Start-->
+    <div class="container-fluid custom-mt">
+      <div class="row d-flex justify-content-center bg-save-money text-center">
+        <h1>SAVE MONEY & APPLY YOUR MEMBERSHIP CARD</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pharetra
+          <br />
+          efficitur diam Lorem ipsum dolor sit amet, consectetur
+        </p>
+        <a href="#">Apply Now</a>
+      </div>
+    </div>
+    <!--Section Save Money End-->
+
+    <!--Section Faq Start-->
+    <section id="faq"></section>
+    <div class="container-fluid custom-px custom-mt faq">
+      <div class="row d-flex align-items-center">
+        <div class="col-md-6">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  HOW DO I CHANGE MY ‘HOME’ GYM?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  pharetra efficitur diam, vel sagittis ipsum. Curabitur
+                  eleifend, risus id sollicitudin pretium, massa ex tristique
+                  velit, ullamcorper feugiat dui tellus in quam.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  WHEN ARE YOUR NEW GYMS DUE TO OPEN?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  pharetra efficitur diam, vel sagittis ipsum. Curabitur
+                  eleifend, risus id sollicitudin pretium, massa ex tristique
+                  velit, ullamcorper feugiat dui tellus in quam.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  DO YOU PROVIDE PARKING AT THE GYM?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  pharetra efficitur diam, vel sagittis ipsum. Curabitur
+                  eleifend, risus id sollicitudin pretium, massa ex tristique
+                  velit, ullamcorper feugiat dui tellus in quam.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFour"
+                >
+                  HOW MUCH IS THE GYM PER MONTH?
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingFour"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  pharetra efficitur diam, vel sagittis ipsum. Curabitur
+                  eleifend, risus id sollicitudin pretium, massa ex tristique
+                  velit, ullamcorper feugiat dui tellus in quam.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="images/faq.png" alt="" width="100%" />
+        </div>
+      </div>
+    </div>
+    <!--Section Faq End-->
+
+    <!--footer Section-->
+    <footer class="custom-mt">
+      <div class="footer container-fluid bg-footer text-white pt-md-3 pt-5">
+        <div class="row pt-md-5 custom-px">
+          <div class="col-md-3 mb-5">
+            <a
+              href=""
+              class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
+              style="font-size: 40px; line-height: 40px"
+            >
+              <div class="pb-1 logo-footer">
+                <img
+                  src="images/logo.png"
+                  alt=""
+                  class="img-fluid"
+                  width="150px"
+                />
+              </div>
+            </a>
+            <p class="mt-3">
+              Consequat lacinia into gravida nisie facils porto lorem ultricies
+              vivamus maecenas one iaculis
+            </p>
+            <div class="d-flex justify-content-start mt-4">
+              <a
+                class="btn btn-outline-primary text-center mr-2 px-0 social-icon"
+                style="width: 38px; height: 38px; border-radius: 10px"
+                href="#"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                class="btn btn-outline-primary text-center mr-2 px-0 social-icon"
+                style="width: 38px; height: 38px; border-radius: 10px"
+                href="#"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                class="btn btn-outline-primary text-center mr-2 px-0 social-icon"
+                style="width: 38px; height: 38px; border-radius: 10px"
+                href="#"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+              <a
+                class="btn btn-outline-primary text-center mr-2 px-0 social-icon"
+                style="width: 38px; height: 38px; border-radius: 10px"
+                href="#"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-md-5 mb-2 quick-links-footer">
+            <h3 class="mb-4 title-footer">Quick Links</h3>
+            <div class="d-flex flex-column justify-content-start">
+              <ul class="footer-link list-unstyled">
+                <li>
+                  <a class="text-white mb-3" href="index.html"
+                    ><i class="fa fa-angle-right mr-2"></i>Home</a
+                  >
+                </li>
+                <li>
+                  <a class="text-white mb-3" href="#about"
+                    ><i class="fa fa-angle-right mr-2"></i>About</a
+                  >
+                </li>
+                <li>
+                  <a class="text-white mb-3" href="#gallery"
+                    ><i class="fa fa-angle-right mr-2"></i>Gallery</a
+                  >
+                </li>
+                <li>
+                  <a class="text-white mb-3" href="#team"
+                    ><i class="fa fa-angle-right mr-2"></i>Team</a
+                  >
+                </li>
+                <li>
+                  <a class="text-white mb-3" href="#faq"
+                    ><i class="fa fa-angle-right mr-2"></i>FAQ</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3 mb-md-5 mb-2 ps-md-0">
+            <h3 class="mb-4 title-footer">Working Hours</h3>
+            <div class="d-flex flex-column justify-content-start">
+              <ul class="list-unstyled footer-link">
+                <li class="text-white mb-0">
+                  <pre>Monday    ...   06:00-21:00</pre>
+                </li>
+                <li class="text-white mb-0">
+                  <pre>Tuesday   ...   06:00-21:00</pre>
+                </li>
+                <li class="text-white mb-0">
+                  <pre>Wednesday ...   06:00-21:00</pre>
+                </li>
+                <li class="text-white mb-0">
+                  <pre>Thursday  ...   06:00-21:00</pre>
+                </li>
+                <li class="text-white mb-0">
+                  <pre>Friday    ...   06:00-21:00</pre>
+                </li>
+                <li class="text-white mb-0">
+                  <pre>Saturday  ...   06:00-21:00</pre>
+                </li>
+                <li class="text-white mb-0">
+                  <pre>Sunday    ...   06:00-21:00</pre>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3 mb-md-5 mb-2 ps-md-5">
+            <h3 class="mb-4 title-footer">Get In Touch</h3>
+            <div class="d-flex">
+              <h4 class="fa fa-map-marker-alt"></h4>
+              <div class="ps-3">
+                <h5 class="text-white">Address</h5>
+                <p>1201 Forum Way South, <br />Forth Street, Texas</p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <h4 class="fa fa-envelope"></h4>
+              <div class="ps-3">
+                <h5 class="text-white">Email</h5>
+                <p>
+                  <a
+                    href="mailto:mailid@domain.com"
+                    style="text-decoration: none; color: white"
+                    >mailid@domain.com</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <h4 class="fa fa-phone"></h4>
+              <div class="ps-3">
+                <h5 class="text-white">Phone</h5>
+                <p>
+                  <a
+                    href="tel:+245-857-5478"
+                    style="text-decoration: none; color: white"
+                    >+245-857-5478</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="container py-4"
+          style="border-top: 0.5px solid rgb(255, 255, 255)"
+        >
+          <p class="m-0 text-center">
+            ©
+            <a
+              class="font-weight-bold"
+              style="text-decoration: none; color: white"
+              >2024, GYM</a
+            >. All Rights Reserved. Designed by
+            <a
+              class="font-weight-bold; devlints"
+              href="https://www.devlints.com/"
+              target="_blank"
+              style="text-decoration: none; color: #da1d25"
+              >Devlints</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!--footer Section end-->
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector(".main-header");
+        if (window.scrollY > 20) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+    </script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  </body>
+</html>
