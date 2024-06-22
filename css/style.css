@@ -648,6 +648,121 @@ body::-webkit-scrollbar-thumb {
   font-size: 30px;
 }
 /* Subscribe End */
+
+/* card start */
+      .pricing-area-two {
+        background-color: white;
+      }
+
+      .pb-70 {
+        padding-bottom: 70px;
+      }
+
+      .pt-100 {
+        padding-top: 100px;
+      }
+
+      .mb-45 {
+        margin-bottom: 45px;
+      }
+
+      .section-title span {
+        color: var(--redColor);
+        display: block;
+      }
+
+      .pricing-area-two .section-title h2 {
+        color: black;
+      }
+
+      .section-title h2 {
+        font-size: 45px;
+        line-height: 1.2;
+        font-weight: 600 !important;
+        max-width: 610px;
+      }
+
+      .pricing-item {
+        padding: 40px 40px 45px;
+        background-color: #191918;
+        margin-bottom: 30px;
+        border-radius: 10px;
+      }
+
+      .pricing-item .pricing-box {
+        width: 80px;
+        line-height: 80px;
+        text-align: center;
+        background-color: var(--background-black);
+        border-radius: 5px;
+        margin-bottom: 25px;
+      }
+
+      .pricing-item span {
+        color: #bcbcbc;
+        display: block;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .pricing-item h2 {
+        font-family: "Teko";
+        font-size: 50px;
+        margin-bottom: 15px;
+        font-weight: 500;
+        color: var(--text-red);
+      }
+
+      .pricing-item h2 sub {
+        font-size: 16px;
+        color: rgb(188, 188, 188);
+        font-family: var(--bodyFonts);
+        font-weight: 400;
+      }
+
+      .pricing-item ul {
+        list-style-type: none;
+        margin: 0 0 30px;
+        padding: 0;
+      }
+
+      .pricing-item ul li {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: rgb(188, 188, 188);
+      }
+
+      .pricing-item .default-btn {
+        padding: 15px 35px;
+        background-color: transparent;
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        text-decoration: none;
+        border-radius: 5px;
+      }
+      .pricing-item .default-btn:hover {
+        background: var(--background-red);
+        border: 1px solid var(--background-red);
+      }
+      .pricing-item ul li del {
+        color: rgb(85, 85, 85);
+      }
+
+      .section-title span {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--text-red);
+        font-weight: 600;
+      }
+
+      .section-title h2 {
+        font-size: 45px;
+        font-weight: 500;
+        font-family: "Teko";
+      }
+      /* card end */
 @media only screen and (max-width: 768px) {
   .custom-px {
     padding-left: 20px;
