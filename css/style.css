@@ -527,11 +527,11 @@ body::-webkit-scrollbar-thumb {
   }
 
   .believe-in-yourself h1 {
-    padding-top: 20px;
+    padding-top: 20px!Important;
   }
 
   .sweat-everyday h1 {
-    padding-top: 20px;
+    padding-top: 20px!Important;
   }
 
   .custom-mt {
