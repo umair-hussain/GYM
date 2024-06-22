@@ -632,6 +632,7 @@ body::-webkit-scrollbar-thumb {
   background-size: cover;
   height: 500px;
   width:100%;
+  overflow-x:hidden;
 }
 
 .hero-image-inner {
