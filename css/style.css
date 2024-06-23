@@ -776,6 +776,7 @@ body::-webkit-scrollbar-thumb {
        padding-bottom: 30px;
        height: 80vh;
        background:white;
+       width:100%;
       }
       fieldset {
         position: absolute;
